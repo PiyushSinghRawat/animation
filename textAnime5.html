@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document5</title>
+    <style>
+        .btn {
+            color: white;
+            background-color: black;
+            font-weight: 900;
+            padding: 0 2rem;
+            height: 50px;
+            position: relative;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid white;
+        }
+
+        .btn:before {
+            --progress: 100%;
+            background:
+                #fff;
+            
+            clip-path: polygon(100% 0,
+                    var(--progress) var(--progress),
+                    0 100%,
+                    100% 100%);
+            content: "";
+            inset: 0;
+            position: absolute;
+            transition: clip-path 0.2s ease;
+        }
+
+        .btn:hover:before {
+            --progress: 0%;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .btn:hover span {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn"><span>BUTTON</span></button>
+</body>
+
+</html>

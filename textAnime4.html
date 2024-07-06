@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document4</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .btn {
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+            height: 50px;
+            padding: 0 2rem;
+            font-weight: 900;
+            position: relative;
+        }
+        
+        .span1 {
+            transition: .3s;
+            transform: scale(0);
+            display: inline-block;
+        }
+        
+        .btn::before {
+            content: 'OL';
+            width: 50%;
+            background-color: white;
+            height: 49px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            color: black;
+            display: grid;
+            align-items: center;
+            justify-content: flex-end;
+            transition: .2s;
+        }
+        
+        .btn::after {
+            content: 'D';
+            width: 50%;
+            background-color: white;
+            height: 49px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            pointer-events: none;
+            color: black;
+            display: grid;
+            align-items: center;
+            justify-content: start;
+            transition: .2s;
+        }
+        
+        .btn:hover::after {
+            height: 0;
+        }
+        
+        .btn:hover span {
+            transform: scale(1);
+        }
+        
+        .btn:hover::before {
+            height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">
+        <span class="span1">NEW</span>
+    </button>
+</body>
+
+</html>

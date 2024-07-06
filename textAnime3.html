@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document3</title>
+    <script src="https://kit.fontawesome.com/2a929caf52.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+            padding: 0;
+            /* margin: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center; */
+            /* height: 100vh; */
+        }
+        
+        .btn {
+            color: white;
+            background-color: #333333;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            font-size: 4rem;
+            position: relative;
+            transition: .2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn::before {
+            background-color: transparent;
+            transform: scale(2);
+            height: 90px;
+            width: 90px;
+            position: absolute;
+            content: '';
+            z-index: -1;
+            pointer-events: none;
+            border-radius: 50%;
+            opacity: 0;
+            transition: .2s;
+            outline: 5px solid white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2);
+        }
+        
+        .btn:hover {
+            color: black;
+            background-color: white;
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn"><span class="span"><i class="fa-solid fa-plane"></i></span></button>
+</body>
+
+</html>
