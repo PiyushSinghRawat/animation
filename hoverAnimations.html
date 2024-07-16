@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img2Cont {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #img2 {
+            transition: all .3s;
+        }
+
+        #img2:hover {
+            transform: scale(1.3);
+        }
+
+        #img21Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img21 {
+            transition: all .3s;
+            transform: scale(1.3);
+            width:
+                300px;
+            object-fit: contain;
+        }
+
+        #img21:hover {
+            width: 350px;
+        }
+
+        #img31Cont {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #img31 {
+            transition: all .3s;
+            transform: scale(1.3);
+
+        }
+
+        #img31:hover {
+            transform: scale(1);
+        }
+
+        #img3Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img3 {
+            transition: all .3s;
+            transform: scale(1.3);
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img3:hover {
+
+            width: 300px;
+        }
+
+        #img4Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img4 {
+            transition: all .3s;
+            /* transform: scale(1.3); */
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img4:hover {
+            transform: translateX(-30px);
+
+            /* width: 300px; */
+        }
+
+        #img5Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img5 {
+            transition: all .4s;
+            transform: scale(1.3) rotate(30deg);
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img5:hover {
+            transform: scale(1) rotate(0deg);
+
+            /* width: 300px; */
+        }
+
+        #img6Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img6 {
+            transition: all .2s;
+            filter: blur(3px);
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img6:hover {
+            filter: blur(0px);
+
+        }
+
+        #img7Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img7 {
+            transition: all .2s;
+            filter: grayscale(100%);
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img7:hover {
+            filter: grayscale(0);
+
+        }
+
+        #img8Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img8 {
+            transition: all .2s;
+            filter: sepia(100%);
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img8:hover {
+            filter: sepia(0);
+
+        }
+
+        #img9Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+        }
+
+        #img9 {
+            transition: all .2s;
+            filter: blur(3px) grayscale(100%);
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img9:hover {
+            filter: blur(0) grayscale(0);
+
+
+        }
+
+        #img10Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+            background: #1abc9c;
+        }
+
+        #img10 {
+            transition: all .2s;
+            opacity: 1;
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img10:hover {
+            opacity: .5;
+
+
+        }
+
+        #img11Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+
+        }
+
+        #img11 {
+            transition: all .2s;
+            opacity: 1;
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+
+        }
+
+        #img11:hover {
+            opacity: .5;
+
+
+        }
+
+        #img12Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+
+        #img12 {
+            transition: all .2s;
+            opacity: 1;
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+        }
+
+        #img12Cont::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, .2);
+            border-radius: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        #img12Cont:hover::before {
+            animation: circle .75s;
+        }
+
+        #img13Cont {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+
+        #img13 {
+            transition: all .2s;
+            opacity: 1;
+            width: 400px;
+            object-fit: contain;
+            /* height: 100%; */
+        }
+
+        #img13Cont::before {
+            position: absolute;
+            top: 0;
+            left: -75%;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: 50%;
+            height: 100%;
+           
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+            -webkit-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+        }
+
+      
+        #img13Cont:hover::before {
+            animation: shine .75s;
+        }
+
+        @keyframes circle {
+            0% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            100% {
+                width: 200%;
+                height: 200%;
+                opacity: 0;
+            }
+        }
+
+
+        @keyframes shine {
+            100% {
+                left: 125%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>no effect</h2>
+    <img id="img1" src="https://picsum.photos/300/200?image=244" alt="">
+    <h2>zoom in1</h2>
+    <div id="img2Cont">
+        <img id="img2" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>zooom in2</h2>
+
+    <div id="img21Cont">
+        <img id="img21" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>zooom out1</h2>
+    <div id="img3Cont">
+        <img id="img3" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>zooom out2</h2>
+    <div id="img31Cont">
+        <img id="img31" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>slide</h2>
+    <div id="img4Cont">
+        <img id="img4" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>rotate + zoom out </h2>
+    <div id="img5Cont">
+        <img id="img5" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>blur</h2>
+    <div id="img6Cont">
+        <img id="img6" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>grayscale</h2>
+
+    <div id="img7Cont">
+        <img id="img7" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>sepia</h2>
+
+    <div id="img8Cont">
+        <img id="img8" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>blur grayscale</h2>
+
+    <div id="img9Cont">
+        <img id="img9" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>opacity1</h2>
+
+    <div id="img10Cont">
+        <img id="img10" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>opacity2</h2>
+
+    <div id="img11Cont">
+        <img id="img11" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>circle</h2>
+
+    <div id="img12Cont">
+        <img id="img12" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+    <h2>shine</h2>
+
+    <div id="img13Cont">
+        <img id="img13" src="https://picsum.photos/300/200?image=244" alt="">
+    </div>
+   
+    
+
+</body>
+
+</html>
